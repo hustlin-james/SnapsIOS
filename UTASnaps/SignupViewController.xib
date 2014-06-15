@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignupViewController">
+            <connections>
+                <outlet property="emailField" destination="iFm-9s-QSJ" id="xar-bw-c82"/>
+                <outlet property="majorField" destination="c0j-rY-FEH" id="Ci0-yP-Bfb"/>
+                <outlet property="passwordField" destination="FMb-nK-xWr" id="yBk-n2-kCw"/>
+                <outlet property="submitBtn" destination="oFq-4I-XV2" id="sW3-k2-ODt"/>
+                <outlet property="usernameField" destination="Kee-gc-Pt7" id="mbT-iB-Tgd"/>
+                <outlet property="vPasswordField" destination="Zcw-C4-r15" id="fm6-aD-uUd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="569"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOa-55-Ld9">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="569"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q80-oF-Q0t">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="510"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wo3-f1-L6G">
+                                    <rect key="frame" x="20" y="20" width="79" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kee-gc-Pt7">
+                                    <rect key="frame" x="0.0" y="49" width="320" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                                </textField>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COW-VP-RbE">
+                                    <rect key="frame" x="20" y="93" width="42" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iFm-9s-QSJ">
+                                    <rect key="frame" x="0.0" y="122" width="320" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMb-nK-xWr">
+                                    <rect key="frame" x="0.0" y="192" width="320" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zcw-C4-r15">
+                                    <rect key="frame" x="0.0" y="269" width="320" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done" secureTextEntry="YES"/>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c0j-rY-FEH">
+                                    <rect key="frame" x="0.0" y="339" width="320" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                                </textField>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPB-5O-eUF">
+                                    <rect key="frame" x="20" y="163" width="76" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgA-cz-Hm5">
+                                    <rect key="frame" x="20" y="240" width="123" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Major" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOj-ti-eCN">
+                                    <rect key="frame" x="20" y="310" width="44" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFq-4I-XV2" customClass="CustomButton">
+                                    <rect key="frame" x="90" y="454" width="140" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="140" id="Shc-ns-Pmz"/>
+                                        <constraint firstAttribute="height" constant="30" id="uFz-ZR-tgG"/>
+                                    </constraints>
+                                    <state key="normal" title="Submit">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="submitBtnTapped:" destination="-1" eventType="touchUpInside" id="1gS-gH-qV7"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Zcw-C4-r15" firstAttribute="trailing" secondItem="c0j-rY-FEH" secondAttribute="trailing" id="4m5-5m-rqa"/>
+                                <constraint firstItem="COW-VP-RbE" firstAttribute="leading" secondItem="PPB-5O-eUF" secondAttribute="leading" id="7b0-e6-1cg"/>
+                                <constraint firstItem="c0j-rY-FEH" firstAttribute="leading" secondItem="Q80-oF-Q0t" secondAttribute="leading" id="E9f-0C-Kcl"/>
+                                <constraint firstItem="Wo3-f1-L6G" firstAttribute="top" secondItem="Q80-oF-Q0t" secondAttribute="top" constant="20" symbolic="YES" id="HR3-Zl-Hna"/>
+                                <constraint firstItem="Zcw-C4-r15" firstAttribute="trailing" secondItem="FMb-nK-xWr" secondAttribute="trailing" id="JK3-yW-S7e"/>
+                                <constraint firstItem="Zcw-C4-r15" firstAttribute="top" secondItem="DgA-cz-Hm5" secondAttribute="bottom" constant="8" symbolic="YES" id="Jvs-wQ-Yen"/>
+                                <constraint firstItem="DgA-cz-Hm5" firstAttribute="leading" secondItem="aOj-ti-eCN" secondAttribute="leading" id="KAA-o6-3sC"/>
+                                <constraint firstItem="FMb-nK-xWr" firstAttribute="leading" secondItem="iFm-9s-QSJ" secondAttribute="leading" id="LTu-8e-ubP"/>
+                                <constraint firstItem="Wo3-f1-L6G" firstAttribute="leading" secondItem="Q80-oF-Q0t" secondAttribute="leading" constant="20" symbolic="YES" id="MCI-jQ-TAG"/>
+                                <constraint firstItem="oFq-4I-XV2" firstAttribute="top" secondItem="c0j-rY-FEH" secondAttribute="bottom" constant="85" id="NxO-mx-pG0"/>
+                                <constraint firstItem="COW-VP-RbE" firstAttribute="top" secondItem="Kee-gc-Pt7" secondAttribute="bottom" constant="14" id="bG2-t0-hbB"/>
+                                <constraint firstItem="Zcw-C4-r15" firstAttribute="leading" secondItem="FMb-nK-xWr" secondAttribute="leading" id="dCP-G7-bDo"/>
+                                <constraint firstItem="c0j-rY-FEH" firstAttribute="top" secondItem="aOj-ti-eCN" secondAttribute="bottom" constant="8" symbolic="YES" id="dyD-gA-rvD"/>
+                                <constraint firstItem="COW-VP-RbE" firstAttribute="leading" secondItem="Wo3-f1-L6G" secondAttribute="leading" id="gvi-6e-Ssh"/>
+                                <constraint firstItem="iFm-9s-QSJ" firstAttribute="trailing" secondItem="FMb-nK-xWr" secondAttribute="trailing" id="kHT-6Y-OGm"/>
+                                <constraint firstItem="iFm-9s-QSJ" firstAttribute="top" secondItem="COW-VP-RbE" secondAttribute="bottom" constant="8" symbolic="YES" id="lmg-US-ylg"/>
+                                <constraint firstItem="FMb-nK-xWr" firstAttribute="top" secondItem="PPB-5O-eUF" secondAttribute="bottom" constant="8" symbolic="YES" id="lps-kV-gk9"/>
+                                <constraint firstItem="oFq-4I-XV2" firstAttribute="centerX" secondItem="c0j-rY-FEH" secondAttribute="centerX" id="mon-St-j31"/>
+                                <constraint firstItem="Kee-gc-Pt7" firstAttribute="leading" secondItem="iFm-9s-QSJ" secondAttribute="leading" id="phd-K5-vnu"/>
+                                <constraint firstItem="c0j-rY-FEH" firstAttribute="leading" secondItem="Zcw-C4-r15" secondAttribute="leading" id="qel-nF-q6t"/>
+                                <constraint firstItem="DgA-cz-Hm5" firstAttribute="top" secondItem="FMb-nK-xWr" secondAttribute="bottom" constant="18" id="sH8-IV-y1T"/>
+                                <constraint firstAttribute="trailing" secondItem="Kee-gc-Pt7" secondAttribute="trailing" id="snz-mg-5d3"/>
+                                <constraint firstItem="iFm-9s-QSJ" firstAttribute="trailing" secondItem="Kee-gc-Pt7" secondAttribute="trailing" id="tPj-Y9-MhC"/>
+                                <constraint firstItem="Kee-gc-Pt7" firstAttribute="top" secondItem="Wo3-f1-L6G" secondAttribute="bottom" constant="8" symbolic="YES" id="uK2-rO-qQX"/>
+                                <constraint firstItem="aOj-ti-eCN" firstAttribute="top" secondItem="Zcw-C4-r15" secondAttribute="bottom" constant="11" id="uwc-lz-9r7"/>
+                                <constraint firstItem="PPB-5O-eUF" firstAttribute="top" secondItem="iFm-9s-QSJ" secondAttribute="bottom" constant="11" id="ypq-aW-zcu"/>
+                                <constraint firstAttribute="bottom" secondItem="oFq-4I-XV2" secondAttribute="bottom" constant="26" id="yxo-oE-275"/>
+                                <constraint firstItem="PPB-5O-eUF" firstAttribute="leading" secondItem="DgA-cz-Hm5" secondAttribute="leading" id="zdn-Vi-pXH"/>
+                            </constraints>
+                            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Q80-oF-Q0t" firstAttribute="centerX" secondItem="HOa-55-Ld9" secondAttribute="centerX" id="4fA-qy-fIG"/>
+                        <constraint firstAttribute="trailing" secondItem="Q80-oF-Q0t" secondAttribute="trailing" id="9Uv-8A-D4m"/>
+                        <constraint firstItem="Q80-oF-Q0t" firstAttribute="top" secondItem="HOa-55-Ld9" secondAttribute="top" id="MNE-NP-tSr"/>
+                        <constraint firstAttribute="bottom" secondItem="Q80-oF-Q0t" secondAttribute="bottom" constant="58" id="Val-c4-hkM"/>
+                        <constraint firstItem="Q80-oF-Q0t" firstAttribute="leading" secondItem="HOa-55-Ld9" secondAttribute="leading" id="xpc-pF-8Ag"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="HOa-55-Ld9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dfE-i9-eNa"/>
+                <constraint firstAttribute="trailing" secondItem="HOa-55-Ld9" secondAttribute="trailing" id="l6A-1R-QKD"/>
+                <constraint firstAttribute="bottom" secondItem="HOa-55-Ld9" secondAttribute="bottom" id="sDR-8s-FqV"/>
+                <constraint firstItem="HOa-55-Ld9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vEK-eV-g0T"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>
