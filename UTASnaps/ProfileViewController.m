@@ -10,6 +10,7 @@
 #import "SessionViewController.h"
 #import "ChangePasswordViewController.h"
 #import "EditProfileViewController.h"
+#import "FavoritesTableViewController.h"
 #import <Parse/Parse.h>
 
 @interface ProfileViewController ()
@@ -41,7 +42,22 @@
 }
 
 - (IBAction)favoriteSnapsBtnTapped:(id)sender {
+    //We should be guaranteed a user when getting here...but who knows
+    PFUser *currentUser = [PFUser currentUser];
     
+    if(currentUser){
+        PFRelation *relation = [currentUser relationForKey:@"favoriteSnaps"];
+        [[relation query] findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if(objects && [objects count] > 0){
+                FavoritesTableViewController *vc = [FavoritesTableViewController new];
+                vc.favoriteSnaps = objects;
+                [self.navigationController pushViewController:vc animated:YES];
+            }else{
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Favorites" message:@"You don't have any favorite snaps." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [alert show];
+            }
+        }];
+    }
 }
 
 - (IBAction)editProfileBtnTapped:(id)sender {

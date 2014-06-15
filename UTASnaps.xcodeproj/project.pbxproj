@@ -12,6 +12,8 @@
 		C1830D9D1944E04A00F901C3 /* SessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1830D9B1944E04A00F901C3 /* SessionViewController.m */; };
 		C1830D9E1944E04A00F901C3 /* SessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1830D9C1944E04A00F901C3 /* SessionViewController.xib */; };
 		C1830DA21944F00000F901C3 /* CustomNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1830DA11944F00000F901C3 /* CustomNavViewController.m */; };
+		C1A912E1194D4E1500779FE7 /* FavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A912DF194D4E1500779FE7 /* FavoritesTableViewController.m */; };
+		C1A912E2194D4E1500779FE7 /* FavoritesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1A912E0194D4E1500779FE7 /* FavoritesTableViewController.xib */; };
 		C1A9E1D419466D4B00F3FB72 /* SubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A9E1D319466D4B00F3FB72 /* SubmitViewController.m */; };
 		C1A9E1D919467DED00F3FB72 /* CustomScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A9E1D819467DED00F3FB72 /* CustomScrollView.m */; };
 		C1AACA5F1944CDCD001C1E5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1AACA5E1944CDCD001C1E5B /* Foundation.framework */; };
@@ -80,6 +82,9 @@
 		C1830D9C1944E04A00F901C3 /* SessionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionViewController.xib; sourceTree = "<group>"; };
 		C1830DA01944F00000F901C3 /* CustomNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavViewController.h; sourceTree = "<group>"; };
 		C1830DA11944F00000F901C3 /* CustomNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavViewController.m; sourceTree = "<group>"; };
+		C1A912DE194D4E1500779FE7 /* FavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesTableViewController.h; sourceTree = "<group>"; };
+		C1A912DF194D4E1500779FE7 /* FavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesTableViewController.m; sourceTree = "<group>"; };
+		C1A912E0194D4E1500779FE7 /* FavoritesTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesTableViewController.xib; sourceTree = "<group>"; };
 		C1A9E1D219466D4B00F3FB72 /* SubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubmitViewController.h; sourceTree = "<group>"; };
 		C1A9E1D319466D4B00F3FB72 /* SubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubmitViewController.m; sourceTree = "<group>"; };
 		C1A9E1D719467DED00F3FB72 /* CustomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomScrollView.h; sourceTree = "<group>"; };
@@ -209,6 +214,16 @@
 				C1830DA11944F00000F901C3 /* CustomNavViewController.m */,
 			);
 			name = customnavcontroller;
+			sourceTree = "<group>";
+		};
+		C1A912DD194D4D8100779FE7 /* favoritesVc */ = {
+			isa = PBXGroup;
+			children = (
+				C1A912DE194D4E1500779FE7 /* FavoritesTableViewController.h */,
+				C1A912DF194D4E1500779FE7 /* FavoritesTableViewController.m */,
+				C1A912E0194D4E1500779FE7 /* FavoritesTableViewController.xib */,
+			);
+			name = favoritesVc;
 			sourceTree = "<group>";
 		};
 		C1A9E1D619467DD400F3FB72 /* customscrollview */ = {
@@ -344,6 +359,7 @@
 		C1AB0C0C1947B8D100F1C786 /* profilevc */ = {
 			isa = PBXGroup;
 			children = (
+				C1A912DD194D4D8100779FE7 /* favoritesVc */,
 				C1B2366D194CF30200F44730 /* editProfileVc */,
 				C1B23667194CE64D00F44730 /* changePwVc */,
 				C1AB0C0D1947B8E600F1C786 /* ProfileViewController.h */,
@@ -553,6 +569,7 @@
 				C1E4F7C119457EF1003510DD /* SignupViewController.xib in Resources */,
 				C1830D991944E02100F901C3 /* UploadOptionViewController.xib in Resources */,
 				C1BD1394194BF3C500940C6D /* CollectionCell.xib in Resources */,
+				C1A912E2194D4E1500779FE7 /* FavoritesTableViewController.xib in Resources */,
 				C1AACA691944CDCD001C1E5B /* InfoPlist.strings in Resources */,
 				C1BD139B194BF3D500940C6D /* CollectionViewController.xib in Resources */,
 				C1AACA711944CDCD001C1E5B /* Images.xcassets in Resources */,
@@ -598,6 +615,7 @@
 				C1A9E1D419466D4B00F3FB72 /* SubmitViewController.m in Sources */,
 				C1B324841946CB3F005AEEBD /* AddTextViewController.m in Sources */,
 				C1830D9D1944E04A00F901C3 /* SessionViewController.m in Sources */,
+				C1A912E1194D4E1500779FE7 /* FavoritesTableViewController.m in Sources */,
 				C1E4F7C019457EF1003510DD /* SignupViewController.m in Sources */,
 				C1AACA6B1944CDCD001C1E5B /* main.m in Sources */,
 			);

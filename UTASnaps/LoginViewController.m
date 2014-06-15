@@ -65,9 +65,6 @@
                 
             }else{
                 NSString *errStr = @"Error logging in";
-                if(error) {
-                    errStr = error.localizedDescription;
-                }
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:errStr delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
                 [alert show];
             }

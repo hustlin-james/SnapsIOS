@@ -14,9 +14,7 @@
     CustomScrollView *scrollView;
     
     UIButton *backBtn;
-    
     UIView *bottomView;
-    
     UITextView *textView;
 }
 
@@ -142,7 +140,19 @@
            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Email not verified." message:@"Please verify your email and login" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
            [alert show];
        }else{
-           NSLog(@"user is logged in and email verified");
+           PFObject *snap = self.object;
+           PFRelation *relation = [currentUser relationForKey:@"favoriteSnaps"];
+           [relation addObject:snap];
+           
+           [currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+               if(succeeded){
+                   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"You have favorited the snap!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                   [alert show];
+               }else{
+                   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to favorite snap" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                   [alert show];
+               }
+           }];
        }
     }else{
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"You must login to favorite" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
