@@ -20,6 +20,8 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"Favorite Snaps";
+    
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     
     // Uncomment the following line to preserve selection between presentations.

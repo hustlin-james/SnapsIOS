@@ -88,7 +88,6 @@
     _titleLabel.enabled = NO;
     _descriptionTextView.editable = NO;
     _submitBtn.enabled = NO;
-    //self.navigationItem.leftBarButtonItem.enabled=NO;
     _cancelBtn.enabled = NO;
 }
 
@@ -99,7 +98,6 @@
     _titleLabel.enabled = YES;
     _descriptionTextView.editable = YES;
     _submitBtn.enabled = YES;
-    
     _cancelBtn.enabled = YES;
 }
 

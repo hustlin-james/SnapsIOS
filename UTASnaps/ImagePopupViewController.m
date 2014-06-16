@@ -52,9 +52,17 @@
     scrollView.backgroundColor = [UIColor blackColor];
     
     scrollView.delegate = self;
-    scrollView.minimumZoomScale = .25;
+    
+    float scale = scrollView.bounds.size.width/image.size.width;
+    
+    if(scrollView.bounds.size.width > image.size.width){
+        scale = image.size.width/scrollView.bounds.size.width;
+    }
+    
+    scrollView.minimumZoomScale = scale;
     scrollView.maximumZoomScale = 1.0;
-    scrollView.zoomScale = .1;
+    scrollView.zoomScale = scale;
+    
     scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     
     [self initializeBackBtn];
