@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *updatedPw;
 @property (weak, nonatomic) IBOutlet UITextField *vUpdatedPw;
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation ChangePasswordViewController

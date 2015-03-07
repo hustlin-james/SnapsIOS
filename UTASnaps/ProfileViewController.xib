@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController">
@@ -16,15 +16,12 @@
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="feV-Vg-Udd">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zI0-B5-yeb">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="441"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGb-0P-Wbb" customClass="CustomButton">
                                     <rect key="frame" x="90" y="30" width="140" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="Jsv-a6-VoT"/>
                                         <constraint firstAttribute="width" constant="140" id="VSf-yH-QH8"/>
@@ -38,7 +35,6 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4UY-6t-Y5X" customClass="CustomButton">
                                     <rect key="frame" x="90" y="100" width="140" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="140" id="QN5-uU-Pzw"/>
                                         <constraint firstAttribute="height" constant="30" id="fht-mw-4Db"/>
@@ -52,7 +48,6 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBP-BD-jTM" customClass="CustomButton">
                                     <rect key="frame" x="90" y="170" width="140" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="VEP-dh-Eig"/>
                                         <constraint firstAttribute="width" constant="140" id="Z1s-QW-GJb"/>
@@ -66,7 +61,6 @@
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sP-CV-u04" customClass="CustomButton">
                                     <rect key="frame" x="90" y="327" width="140" height="30"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="B2k-oe-psp"/>
                                         <constraint firstAttribute="width" constant="140" id="n20-Ak-uir"/>
@@ -79,7 +73,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstItem="QGb-0P-Wbb" firstAttribute="trailing" secondItem="4UY-6t-Y5X" secondAttribute="trailing" id="1A1-ta-4Jy"/>
                                 <constraint firstAttribute="height" constant="441" id="5BR-H2-bwP"/>
@@ -97,7 +91,6 @@
                                 <constraint firstAttribute="centerX" secondItem="BBP-BD-jTM" secondAttribute="centerX" id="qbP-vN-Nyu"/>
                                 <constraint firstAttribute="bottom" secondItem="7sP-CV-u04" secondAttribute="bottom" constant="84" id="wvd-4g-hf1"/>
                             </constraints>
-                            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                         </view>
                     </subviews>
                     <constraints>
@@ -115,6 +108,14 @@
                 <constraint firstAttribute="bottom" secondItem="feV-Vg-Udd" secondAttribute="bottom" id="dvg-WX-ce2"/>
                 <constraint firstAttribute="trailing" secondItem="feV-Vg-Udd" secondAttribute="trailing" id="jOA-Oe-Bc8"/>
             </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="435" y="216"/>
         </view>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SessionViewController">
@@ -16,40 +16,38 @@
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50J-wP-MtG">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQB-TR-Hca">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="458"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCw-hm-Ax3" customClass="CustomButton">
                                     <rect key="frame" x="90" y="81" width="140" height="34"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="34" id="Z1c-A0-Whm"/>
                                         <constraint firstAttribute="width" constant="140" id="bGG-CC-RCg"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                                     <state key="normal" title="Login"/>
                                     <connections>
                                         <action selector="loginBtnPressed:" destination="-1" eventType="touchUpInside" id="zK2-Er-80k"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsv-Dt-m72" customClass="CustomButton">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsv-Dt-m72" customClass="CustomButton">
                                     <rect key="frame" x="90" y="163" width="140" height="34"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="34" id="wtG-vP-0As"/>
                                         <constraint firstAttribute="width" constant="140" id="zxE-r0-415"/>
                                     </constraints>
+                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
                                     <state key="normal" title="Signup"/>
                                     <connections>
                                         <action selector="signupBtnPressed:" destination="-1" eventType="touchUpInside" id="gKa-q4-qB7"/>
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="1" green="0.51145833330000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="centerX" secondItem="TCw-hm-Ax3" secondAttribute="centerX" id="BwM-g0-8XK"/>
                                 <constraint firstItem="Fsv-Dt-m72" firstAttribute="leading" secondItem="TCw-hm-Ax3" secondAttribute="leading" id="EQa-EX-tHK"/>
@@ -69,13 +67,20 @@
                     </constraints>
                 </scrollView>
             </subviews>
+            <color key="backgroundColor" red="1" green="0.51145833330000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="50J-wP-MtG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1o2-A9-ueg"/>
                 <constraint firstAttribute="trailing" secondItem="50J-wP-MtG" secondAttribute="trailing" id="bkm-VJ-QeV"/>
                 <constraint firstAttribute="bottom" secondItem="50J-wP-MtG" secondAttribute="bottom" id="lyK-Qy-3Ku"/>
                 <constraint firstItem="50J-wP-MtG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mBs-Ve-Ror"/>
             </constraints>
-            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="420" y="173"/>
         </view>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
