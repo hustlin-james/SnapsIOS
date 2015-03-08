@@ -73,7 +73,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" red="1" green="0.51145833330000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstItem="QGb-0P-Wbb" firstAttribute="trailing" secondItem="4UY-6t-Y5X" secondAttribute="trailing" id="1A1-ta-4Jy"/>
                                 <constraint firstAttribute="height" constant="441" id="5BR-H2-bwP"/>
@@ -93,6 +93,7 @@
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" red="1" green="0.51145833330000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="zI0-B5-yeb" secondAttribute="trailing" id="1Em-X6-NIM"/>
                         <constraint firstItem="zI0-B5-yeb" firstAttribute="leading" secondItem="feV-Vg-Udd" secondAttribute="leading" id="MVB-OT-gnQ"/>
@@ -102,6 +103,7 @@
                     </constraints>
                 </scrollView>
             </subviews>
+            <color key="backgroundColor" red="1" green="0.51145833330000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="feV-Vg-Udd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="25p-bM-IZt"/>
                 <constraint firstItem="feV-Vg-Udd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SpL-6Y-dgv"/>

@@ -8,18 +8,31 @@
 
 #import "EditProfileViewController.h"
 #import "CustomButton.h"
+#import "FormsTableViewCell.h"
 #import <Parse/Parse.h>
 
-@interface EditProfileViewController (){
+#define NUM_TABLE_ROWS 3
+
+static NSString* const kDefaultCellId = @"default";
+static NSString* const kUsernameCellId = @"username";
+static NSString* const kEmailCellId = @"email";
+static NSString* const kMajorCellId = @"major";
+static NSString *kCellNibName = @"FormsTableViewCell";
+
+
+@interface EditProfileViewController ()
+<UITableViewDataSource, UITableViewDelegate, FormsTextFieldDelegate>{
     PFUser *currentUser;
 }
 
-@property (weak, nonatomic) IBOutlet UITextField *usernameField;
-@property (weak, nonatomic) IBOutlet UITextField *majorField;
-@property (weak, nonatomic) IBOutlet UITextField *emailField;
+@property (strong,nonatomic) NSString *username;
+@property (strong,nonatomic) NSString *major;
+@property (strong,nonatomic) NSString *email;
 
 @property (weak, nonatomic) IBOutlet CustomButton *editBtn;
 @property (weak, nonatomic) IBOutlet CustomButton *cancelBtn;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -37,19 +50,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    self.usernameField.delegate = self;
-    self.majorField.delegate = self;
-    self.emailField.delegate = self;
     
     currentUser = [PFUser currentUser];
     [currentUser refresh];
-    
-    self.usernameField.text = currentUser.username;
-    self.majorField.text = currentUser[@"major"];
-    self.emailField.text = currentUser.email;
 
-    [self disableTextFields];
+    self.username = currentUser.username;
+    self.major = currentUser[@"major"];
+    self.email = currentUser.email;
+
+    //[self disableTextFields];
+    self.tableView.layer.cornerRadius = 5.0;
+    self.tableView.allowsSelection = NO;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:kCellNibName bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kUsernameCellId];
+    [self.tableView registerNib:[UINib nibWithNibName:kCellNibName bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kEmailCellId];
+    [self.tableView registerNib:[UINib nibWithNibName:kCellNibName bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kMajorCellId];
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,41 +73,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)disableTextFields{
-    self.usernameField.enabled = NO;
-    self.majorField.enabled = NO;
-    self.emailField.enabled= NO;
-}
-
-- (void)enableTextFields{
-    self.usernameField.enabled = YES;
-    self.majorField.enabled = YES;
-    self.emailField.enabled= YES;
-}
 
 - (IBAction)editBtnTapped:(id)sender {
-    if([self.editBtn.titleLabel.text isEqualToString:@"Edit"]){
-        [self.editBtn setTitle:@"Save" forState:UIControlStateNormal];
-        [self enableTextFields];
-    }else{
-        
-        [self disableTextFields];
-        
-       [self.editBtn setTitle:@"Edit" forState:UIControlStateNormal];
-        
+
         //Save the changes if there are any
         NSString *username = currentUser.username;
         NSString *major = currentUser[@"major"];
         NSString *email = currentUser.email;
         
-        if(![self.usernameField.text isEqualToString:@""])
-            username = self.usernameField.text;
+        if(![self.username isEqualToString:@""])
+            username = self.username;
         
-        if(![self.majorField.text isEqualToString:@""])
-            major = self.majorField.text;
+        if(![self.major isEqualToString:@""])
+            major = self.major;
         
-        if(![self.emailField.text isEqualToString:@""])
-            email = self.emailField.text;
+        if(![self.email isEqualToString:@""])
+            email = self.email;
         
         currentUser.username = username;
         currentUser[@"major"] = major;
@@ -108,10 +104,8 @@
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:errStr delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
                 [alert show];
             }
-            [self enableTextFields];
         }];
         
-    }
 }
 
 - (IBAction)cancelBtnTapped:(id)sender {
@@ -120,5 +114,54 @@
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     return YES;
+}
+
+#pragma mark - tables
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return NUM_TABLE_ROWS;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    FormsTableViewCell *cell = nil;
+    
+    switch (indexPath.row) {
+        case 0:
+        {
+            cell = [self.tableView dequeueReusableCellWithIdentifier:kUsernameCellId];
+            cell.delegate = self;
+            cell.textField.placeholder = self.username;
+        }
+        break;
+        case 1:
+        {
+            cell = [self.tableView dequeueReusableCellWithIdentifier:kEmailCellId];
+            cell.delegate = self;
+            cell.textField.placeholder = self.email;
+        }
+        break;
+        case 2:
+        {
+            cell = [self.tableView dequeueReusableCellWithIdentifier:kMajorCellId];
+            cell.delegate = self;
+            cell.textField.placeholder = self.major;
+        }
+        break;
+        default:
+            break;
+    }
+    
+    return cell;
+}
+
+-(void)textFieldKey:(NSString *)key andValue:(NSString *)value{
+    if([key isEqualToString:kUsernameCellId]){
+        self.username = value;
+    }
+    else if([key isEqualToString:kEmailCellId]){
+        self.email = value;
+    }
+    else if([key isEqualToString:kMajorCellId]){
+        self.major = value;
+    }
 }
 @end

@@ -8,7 +8,11 @@
 
 #import "FavoritesTableViewController.h"
 #import "ImagePopupViewController.h"
+#import "FavoritesTableViewCell.h"
 #import <Parse/Parse.h>
+
+static NSString* const kFavoritesCellId = @"favoritesCell";
+static NSString *kCellNibName = @"FavoritesTableViewCell";
 
 @interface FavoritesTableViewController ()
 
@@ -21,14 +25,9 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"Favorite Snaps";
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView registerNib:[UINib nibWithNibName:kCellNibName bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kFavoritesCellId];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,15 +53,22 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
-    // Configure the cell...
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
-    }
+    FavoritesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFavoritesCellId];
     
     PFObject *object = self.favoriteSnaps[indexPath.row];
-    cell.textLabel.text = object[@"title"];
+    cell.favoritesTextLabel.text = object[@"title"];
+    
+    PFFile *imageFile = object[@"imageFile"];
+    
+    [imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if(data) {
+            UIImage *image = [UIImage imageWithData:data];
+            cell.favoritesImageView.image = image;
+            
+            
+        }
+    }];
+    
     return cell;
 }
 
@@ -87,43 +93,4 @@
         }
     }];
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C16997B51AABD02F0012D3AE /* FavoritesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C16997B31AABD02F0012D3AE /* FavoritesTableViewCell.m */; };
+		C16997B61AABD02F0012D3AE /* FavoritesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C16997B41AABD02F0012D3AE /* FavoritesTableViewCell.xib */; };
 		C1830D981944E02100F901C3 /* UploadOptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1830D961944E02100F901C3 /* UploadOptionViewController.m */; };
 		C1830D991944E02100F901C3 /* UploadOptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1830D971944E02100F901C3 /* UploadOptionViewController.xib */; };
 		C1830D9D1944E04A00F901C3 /* SessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1830D9B1944E04A00F901C3 /* SessionViewController.m */; };
@@ -75,6 +77,8 @@
 		C1BD13A6194BF8A000940C6D /* ImagePopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BD13A5194BF8A000940C6D /* ImagePopupViewController.m */; };
 		C1E4F7C019457EF1003510DD /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E4F7BE19457EF1003510DD /* SignupViewController.m */; };
 		C1E4F7C119457EF1003510DD /* SignupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1E4F7BF19457EF1003510DD /* SignupViewController.xib */; };
+		C1F9DCA71AA957B5005DF06E /* FormsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F9DCA51AA957B5005DF06E /* FormsTableViewCell.m */; };
+		C1F9DCA81AA957B5005DF06E /* FormsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1F9DCA61AA957B5005DF06E /* FormsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +92,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C16997B21AABD02F0012D3AE /* FavoritesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesTableViewCell.h; sourceTree = "<group>"; };
+		C16997B31AABD02F0012D3AE /* FavoritesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesTableViewCell.m; sourceTree = "<group>"; };
+		C16997B41AABD02F0012D3AE /* FavoritesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavoritesTableViewCell.xib; sourceTree = "<group>"; };
 		C1830D951944E02100F901C3 /* UploadOptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadOptionViewController.h; sourceTree = "<group>"; };
 		C1830D961944E02100F901C3 /* UploadOptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadOptionViewController.m; sourceTree = "<group>"; };
 		C1830D971944E02100F901C3 /* UploadOptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UploadOptionViewController.xib; sourceTree = "<group>"; };
@@ -179,6 +186,9 @@
 		C1E4F7BD19457EF1003510DD /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		C1E4F7BE19457EF1003510DD /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 		C1E4F7BF19457EF1003510DD /* SignupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignupViewController.xib; sourceTree = "<group>"; };
+		C1F9DCA41AA957B5005DF06E /* FormsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormsTableViewCell.h; sourceTree = "<group>"; };
+		C1F9DCA51AA957B5005DF06E /* FormsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormsTableViewCell.m; sourceTree = "<group>"; };
+		C1F9DCA61AA957B5005DF06E /* FormsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +224,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C135BCD71AAB6A8E009118CA /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				C16997B11AABCE6F0012D3AE /* favorites */,
+				C16997B01AABCE650012D3AE /* forms */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
+		C16997B01AABCE650012D3AE /* forms */ = {
+			isa = PBXGroup;
+			children = (
+				C1F9DCA41AA957B5005DF06E /* FormsTableViewCell.h */,
+				C1F9DCA51AA957B5005DF06E /* FormsTableViewCell.m */,
+				C1F9DCA61AA957B5005DF06E /* FormsTableViewCell.xib */,
+			);
+			name = forms;
+			sourceTree = "<group>";
+		};
+		C16997B11AABCE6F0012D3AE /* favorites */ = {
+			isa = PBXGroup;
+			children = (
+				C16997B21AABD02F0012D3AE /* FavoritesTableViewCell.h */,
+				C16997B31AABD02F0012D3AE /* FavoritesTableViewCell.m */,
+				C16997B41AABD02F0012D3AE /* FavoritesTableViewCell.xib */,
+			);
+			name = favorites;
+			sourceTree = "<group>";
+		};
 		C1830D8E1944DFC400F901C3 /* uploadvc */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +374,7 @@
 		C1AACA641944CDCD001C1E5B /* UTASnaps */ = {
 			isa = PBXGroup;
 			children = (
+				C135BCD71AAB6A8E009118CA /* cell */,
 				C1ABB46519463EC60001927F /* doge.jpg */,
 				C1BD139C194BF3DA00940C6D /* placeholder.jpg */,
 				C1A9E1D619467DD400F3FB72 /* customscrollview */,
@@ -622,6 +662,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1AA4C22194E2524000706DC /* Icon-60.png in Resources */,
+				C16997B61AABD02F0012D3AE /* FavoritesTableViewCell.xib in Resources */,
 				C1B2366C194CE66100F44730 /* ChangePasswordViewController.xib in Resources */,
 				C1BD138F194BF3B300940C6D /* Footer.xib in Resources */,
 				C1B23672194CF31200F44730 /* EditProfileViewController.xib in Resources */,
@@ -636,6 +677,7 @@
 				C1A912E2194D4E1500779FE7 /* FavoritesTableViewController.xib in Resources */,
 				C1AACA691944CDCD001C1E5B /* InfoPlist.strings in Resources */,
 				C1BD139B194BF3D500940C6D /* CollectionViewController.xib in Resources */,
+				C1F9DCA81AA957B5005DF06E /* FormsTableViewCell.xib in Resources */,
 				C1AACA711944CDCD001C1E5B /* Images.xcassets in Resources */,
 				C1ABB46619463EC60001927F /* doge.jpg in Resources */,
 				C1A912FD194D7D0D00779FE7 /* landscape_1024_@2x.png in Resources */,
@@ -674,6 +716,7 @@
 				C1BD138E194BF3B300940C6D /* Footer.m in Sources */,
 				C1B2366B194CE66100F44730 /* ChangePasswordViewController.m in Sources */,
 				C1AB0C0A1947B0D900F1C786 /* LoginViewController.m in Sources */,
+				C1F9DCA71AA957B5005DF06E /* FormsTableViewCell.m in Sources */,
 				C1830DA21944F00000F901C3 /* CustomNavViewController.m in Sources */,
 				C1AB0C101947B8E600F1C786 /* ProfileViewController.m in Sources */,
 				C1A9E1D919467DED00F3FB72 /* CustomScrollView.m in Sources */,
@@ -690,6 +733,7 @@
 				C1A912E1194D4E1500779FE7 /* FavoritesTableViewController.m in Sources */,
 				C1E4F7C019457EF1003510DD /* SignupViewController.m in Sources */,
 				C1AACA6B1944CDCD001C1E5B /* main.m in Sources */,
+				C16997B51AABD02F0012D3AE /* FavoritesTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,7 +857,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UTASnaps/UTASnaps-Prefix.pch";
 				INFOPLIST_FILE = "UTASnaps/UTASnaps-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -833,7 +877,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UTASnaps/UTASnaps-Prefix.pch";
 				INFOPLIST_FILE = "UTASnaps/UTASnaps-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

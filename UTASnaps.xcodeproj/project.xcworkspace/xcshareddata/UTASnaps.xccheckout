@@ -10,29 +10,29 @@
 	<string>UTASnaps</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F7E6BB0B-B205-4E18-AC3D-C97128E99653</key>
+		<key>177F62BB1FF33DC89134F0A0E17CAEFDD85F3737</key>
 		<string>https://github.com/hustlin-james/UTASnaps.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>UTASnaps.xcodeproj/project.xcworkspace</string>
+	<string>UTASnaps.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F7E6BB0B-B205-4E18-AC3D-C97128E99653</key>
+		<key>177F62BB1FF33DC89134F0A0E17CAEFDD85F3737</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/hustlin-james/UTASnaps.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F7E6BB0B-B205-4E18-AC3D-C97128E99653</string>
+	<string>177F62BB1FF33DC89134F0A0E17CAEFDD85F3737</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F7E6BB0B-B205-4E18-AC3D-C97128E99653</string>
+			<string>177F62BB1FF33DC89134F0A0E17CAEFDD85F3737</string>
 			<key>IDESourceControlWCCName</key>
 			<string>UTASnaps</string>
 		</dict>
